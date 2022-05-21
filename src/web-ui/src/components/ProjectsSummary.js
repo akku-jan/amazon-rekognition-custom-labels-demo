@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Alert, Button, Card, Spinner, Table } from "react-bootstrap";
-import { formatErrorMessage, mapResults } from "../utils";
+import React, {useEffect, useState} from "react";
+import {Alert, Button, Card, Spinner, Table} from "react-bootstrap";
+import {formatErrorMessage, mapResults} from "../utils";
 
 import ProjectActions from "./ProjectActions";
 
-const ProjectsSummary = ({ gateway, onHelp, onVersionClick }) => {
+const ProjectsSummary = ({gateway, onHelp, onVersionClick}) => {
   const [projects, setProjects] = useState(undefined);
   const [errorDetails, setErrorDetails] = useState(undefined);
   const [projectsRefreshCycle, setProjectsRefreshCycle] = useState(1);
@@ -27,19 +27,19 @@ const ProjectsSummary = ({ gateway, onHelp, onVersionClick }) => {
 
   return (
     <div className="projects tab-content">
-      <div className="logo">
+      {/* <div className="logo">
         <img src="/cllogo.png" alt="Amazon Rekognition Custom Labels Logo" />
-      </div>
-      <h2>Amazon Rekognition Custom Labels Demo</h2>
-      <div className="powered">powered by Amazon Rekognition</div>
+      </div> */}
+      <h2>Tool Detector</h2>
+      <div className="powered">powered by shareit.ai</div>
       {errorDetails && (
-        <Alert variant="danger" style={{ marginTop: "30px" }}>
+        <Alert variant="danger" style={{marginTop: "30px"}}>
           An error happened: {errorDetails}.{" "}
           <a href={window.location.href}>Retry</a>.
         </Alert>
       )}
       {!errorDetails && !projects && (
-        <Spinner animation="border" role="status" style={{ marginTop: "30px" }}>
+        <Spinner animation="border" role="status" style={{marginTop: "30px"}}>
           <span className="sr-only">Loading...</span>
         </Spinner>
       )}
@@ -76,7 +76,7 @@ const ProjectsSummary = ({ gateway, onHelp, onVersionClick }) => {
                         )}
                       </td>
                       <td>{version.details.Status}</td>
-                      <td style={{ textAlign: "right" }}>
+                      <td style={{textAlign: "right"}}>
                         <ProjectActions
                           project={version.details}
                           gateway={gateway}

@@ -1,9 +1,9 @@
 import React from "react";
 
-const FileUpload = ({ id, onChange }) => (
+const FileUpload = ({id, onChange}) => (
   <div className="form-element">
     <div className="form-prompt">
-      Use your own image
+      Anaylze your tool
       <div className="form-instructions">
         Image must be .jpeg or .png format and no larger than 4MB. Your image
         isn't stored.
@@ -11,7 +11,7 @@ const FileUpload = ({ id, onChange }) => (
     </div>
     <div className="upload-prompt-row">
       <div>
-        <label style={{ display: "inline-table" }} htmlFor={id}>
+        <label style={{display: "inline-table"}} htmlFor={id}>
           <div className="awsui-button awsui-button-size-normal awsui-button-variant-primary awsui-hover-child-icons upload-button">
             <div className="awsui-icon upload awsui-icon-light"></div>
             <div className="button-text">Upload</div>

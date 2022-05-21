@@ -1,6 +1,6 @@
-import { Authenticator, Greetings, SignUp } from "aws-amplify-react";
-import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import {Authenticator, Greetings, SignUp} from "aws-amplify-react";
+import React, {useState} from "react";
+import {Container} from "react-bootstrap";
 
 import Header from "./components/Header";
 import ImageMode from "./components/ImageMode";
@@ -13,9 +13,8 @@ import gateway from "./utils/gateway";
 const App = () => {
   const [authState, setAuthState] = useState(undefined);
   const [currentPage, setCurrentPage] = useState("projects");
-  const [selectedProjectVersion, setSelectedProjectVersion] = useState(
-    undefined
-  );
+  const [selectedProjectVersion, setSelectedProjectVersion] =
+    useState(undefined);
 
   const onHelp = () => setCurrentPage("help");
   const loadProjectList = () => setCurrentPage("projects");

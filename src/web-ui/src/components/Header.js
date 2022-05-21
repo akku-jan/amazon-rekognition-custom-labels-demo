@@ -1,9 +1,9 @@
 import React from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import {Button, Container, Nav, Navbar} from "react-bootstrap";
 
-const Header = ({ currentPage, onHelp, loadProjectList }) => (
+const Header = ({currentPage, onHelp, loadProjectList}) => (
   <Navbar
-    style={{ backgroundColor: "#232f3e", marginBottom: "20px" }}
+    style={{backgroundColor: "#ffffff", marginBottom: "20px"}}
     variant="dark"
   >
     <Container>
@@ -14,7 +14,7 @@ const Header = ({ currentPage, onHelp, loadProjectList }) => (
       <Navbar.Collapse>
         <Nav className="ml-auto">
           {currentPage !== "projects" && (
-            <Button onClick={loadProjectList} variant="primary">
+            <Button onClick={loadProjectList} variant="akkurent">
               Projects
             </Button>
           )}
